@@ -1,2 +1,2 @@
 # goal-tracker
-Simple goal tracking mobile application with MVVM architecture and Room database using Kotlin
+Simple goal tracking mobile application using Clean Architecture with MVVM and Room database
