@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.slicksoftcoder.goaltracker.feature.data.data_source.GoalDatabase
 import com.slicksoftcoder.goaltracker.feature.data.repository.GoalRepositoryImpl
 import com.slicksoftcoder.goaltracker.feature.domain.repository.GoalRepository
+import com.slicksoftcoder.goaltracker.feature.domain.use_case.AddGoal
 import com.slicksoftcoder.goaltracker.feature.domain.use_case.DeleteGoal
 import com.slicksoftcoder.goaltracker.feature.domain.use_case.GetGoals
 import com.slicksoftcoder.goaltracker.feature.domain.use_case.GoalUseCases
@@ -38,7 +39,8 @@ object AppModule {
     fun provideGoalUseCases(repository: GoalRepository) : GoalUseCases {
         return GoalUseCases(
             getGoals = GetGoals(repository),
-            deleteGoal = DeleteGoal(repository)
+            deleteGoal = DeleteGoal(repository),
+            addGoal = AddGoal(repository)
         )
     }
 }

@@ -8,7 +8,6 @@ import com.slicksoftcoder.goaltracker.ui.theme.*
 data class Goal(
     @PrimaryKey val id: Int? = null,
     val objective: String,
-    val timeframe: Long,
     val status: Int,
     val timestamp: Long,
     val color: Int
@@ -17,3 +16,5 @@ data class Goal(
         val goalColors = listOf(RedOrange, LightGreen, Violet, BabyBlue, RedPink)
     }
 }
+
+class InvalidGoalException(message: String): Exception(message)
